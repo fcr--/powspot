@@ -25,7 +25,7 @@ floppy/DOS.SYS:
 
 floppy/AUTORUN.SYS: powspot.c
 	mkdir -p floppy
-	cl65 -t atari -O -Wl -D__RESERVED_MEMORY__=0x2002 powspot.c -o floppy/AUTORUN.SYS
+	cl65 -t atari -Os -Cl -Wl -D__RESERVED_MEMORY__=7680 -Wl -D__STACKSIZE__=256 powspot.c -o floppy/AUTORUN.SYS
 
 clean:
 	rm -rf bootsectors powspot.o powspot.atr floppy

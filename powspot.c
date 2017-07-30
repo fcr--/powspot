@@ -11,7 +11,10 @@
 typedef unsigned word;
 typedef unsigned char byte;
 
-// 8640 == 320*192*(9/8)/8
+// Uncomment the following line to remove the help message and directory listing:
+//#define SMALL_VERSION 1
+
+// 8640 == 320*192*(9/8)/8. You can reduce this value up to the size of the biggest IMZ file
 #define MAX_BUF 8640
 static byte buffer[MAX_BUF];
 static word compressed_length;
@@ -95,6 +98,7 @@ void main(void) {
   for (;;) {
     page = 0;
     forward = true;
+#ifndef SMALL_VERSION
     {
       DIR * d;
       struct dirent * de;
@@ -111,6 +115,7 @@ void main(void) {
     printf("\nGo to next slide using SPACE or RETURN,\n"
 	"backwards with DELETE, and back to this\n"
 	"menu with ESC.\n\n");
+#endif
     POKE(710, 0x94); // restore background
     printf("Enter page num. or RETURN to continue!\n> ");
     cursor(1);
