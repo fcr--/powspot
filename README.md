@@ -1,5 +1,7 @@
 # PowSpot!
-Tool for creation and display of slide based presentations.
+Tool for creation (in a PC) and display (in 8-bit Atari computers) of slides based presentations.
+
+A minimum of 32kB of RAM is needed (~8kB for DOS, ~8kB for screen memory and display list, ~8kB for the read buffer and ~8kB for the PowSpot! executable).
 
 ## Installation instructions.
 
@@ -19,3 +21,11 @@ IMAGES = \
   Page0052-3.png
 ```
 * Finally run `make` and enjoy your new presentation at `powspot.atr`.
+
+## Usage instructions.
+
+* Create a lot of black and white 320x192 images.
+* List them in order in `Images.mak`.
+* Run `make`.
+
+After compressed, each image takes about 2 ~ 3 KB. Meaning that you'll have space for about 40~50 slides in a 130KB enhanced density disk, or 55~80 slides in a double density one.
