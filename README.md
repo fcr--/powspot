@@ -28,4 +28,4 @@ IMAGES = \
 * List them in order in `Images.mak`.
 * Run `make`.
 
-After compressed, each image takes about 2 ~ 3 KB. Meaning that you'll have space for about 40~50 slides in a 130KB enhanced density disk, or 55~80 slides in a double density one.
+After compressed, each image takes about 2 ~ 3 KB. Meaning that you'll have space for about 40 ~ 50 slides in a 130KB enhanced density disk, or 55 ~ 80 slides in a double density one.
